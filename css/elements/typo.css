@@ -1,0 +1,153 @@
+/****************** Typography *********************
+ *
+ *  1. Fonts
+ *  2. Headlines, h1 - h6
+ *  3. Paragraphs
+ *  4. Unordered & ordered lists
+ *  5. Links & anchors
+ *
+****************************************************/
+/**** 1. Fonts ****/
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../fonts/Gotham-Book.eot');
+    src: url('../../fonts/Gotham-Book-1.eot') format('embedded-opentype'),
+        url('../../fonts/Gotham-Book.woff2') format('woff2'),
+        url('../../fonts/Gotham-Book.woff') format('woff'),
+        url('../../fonts/Gotham-Book.ttf') format('truetype'),
+        url('../../fonts/Gotham-Book.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../fonts/Gotham-Bold.eot');
+    src: url('../../fonts/Gotham-Bold-1.eot') format('embedded-opentype'),
+        url('../../fonts/Gotham-Bold.woff2') format('woff2'),
+        url('../../fonts/Gotham-Bold.woff') format('woff'),
+        url('../../fonts/Gotham-Bold.ttf') format('truetype'),
+        url('../../fonts/Gotham-Bold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../fonts/Gotham-Medium.eot');
+    src: url('../../fonts/Gotham-Medium-1.eot') format('embedded-opentype'),
+        url('../../fonts/Gotham-Medium.woff2') format('woff2'),
+        url('../../fonts/Gotham-Medium.woff') format('woff'),
+        url('../../fonts/Gotham-Medium.ttf') format('truetype'),
+        url('../../fonts/Gotham-Medium.svg') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../fonts/Gotham-Light.eot');
+    src: url('../../fonts/Gotham-Light-1.eot') format('embedded-opentype'),
+        url('../../fonts/Gotham-Light.woff2') format('woff2'),
+        url('../../fonts/Gotham-Light.woff') format('woff'),
+        url('../../fonts/Gotham-Light.ttf') format('truetype'),
+        url('../../fonts/Gotham-Light.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Azo Sans';
+    src: url('../../fonts/AzoSans-LightItalic.eot');
+    src: url('../../fonts/AzoSans-LightItalic-1.eot') format('embedded-opentype'),
+        url('../../fonts/AzoSans-LightItalic.woff2') format('woff2'),
+        url('../../fonts/AzoSans-LightItalic.woff') format('woff'),
+        url('../../fonts/AzoSans-LightItalic.ttf') format('truetype'),
+        url('../../fonts/AzoSans-LightItalic.svg') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+/**** 2. Headlines, h1 - h6 ****/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Gotham';
+    line-height: 1.2;
+}
+h1 {
+    font-size: 32px;
+    margin: 0 0 20px;
+    font-weight: bold;
+    color: #000;
+}
+h2 {
+    color: #007ec4;
+    font-size: 28px;
+    margin: 0 0 20px;
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+h2 span {
+    font-weight: 500;
+    color: #000;
+}
+h3 {
+    font-size: 24px;
+    margin: 0 0 15px;
+    font-weight: 500;
+    color: #000;
+}
+h4 {
+    font-size: 22px;
+    letter-spacing: -1px;
+    margin: 0 0 10px;
+    color: #fff;
+    font-weight: 500;
+}
+h5 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #9a9a9a;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+/**** 3. Paragraphs ****/
+p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 2;
+    margin: 0 0 30px;
+}
+p a {
+    color: #643895;
+}
+/**** 4. Unordered & ordered lists ****/
+ul, ol {
+    padding: 0;
+    list-style: none;
+}
+.box-list li {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 5px;
+}
+/**** 5. Links & anchors ****/
+a {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    color: #414042;
+}
+a:hover {
+    text-decoration: none;
+    color: #643895;
+}
+a,a:hover,a:focus,a:active,
+.uk-button,.uk-button:hover,.uk-button:focus,.uk-button:active,
+.uk-button-link,.uk-button-link:hover,.uk-button-link:focus,.uk-button-link:active {
+    outline: none;
+    text-decoration: none;
+}
+h3 a,
+h4 a {
+    color: #000;
+}

@@ -1,0 +1,250 @@
+:root {
+  --primary-color: #00adea;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  /* min-height: 100vh; */
+}
+/* Global Stylings */
+/* label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+} */
+
+.width-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 1rem 0 1rem;
+}
+
+.progressbar::before,
+.progressline {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.progressline {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #dcdcdc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+}
+
+/* Form */
+.form {
+  /* width: clamp(320px, 30%, 430px); */
+  background: white;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.form-step {
+  display: none;
+  transform-origin: top;
+  animation: animate 0.5s;
+}
+
+.form-step-active {
+  display: block;
+}
+
+.input-group {
+  margin: 2rem 0;
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+/* Button */
+.btns-group {
+  display: flex;
+  flex-direction: row;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  justify-content: space-between;
+
+}
+
+.btns {
+  padding: 0.75rem;
+  display: block;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  color: #f3f3f3;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btns:hover {
+  color:white;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--primary-color);
+}
+
+/* start info page right side css */
+#steperrowcss{
+  display: flex;
+  flex-direction: row;
+margin: auto;
+width: 90%;
+align-content: space-between;
+justify-content: space-evenly;
+}
+infodiv{
+ margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:700px) {
+  .progressbar {
+    width: 90%;
+  }
+  #steperrowcss{
+    flex-direction: column;
+  }
+  .form {
+    width: 95%;
+  }
+  infodiv{
+    display: none;
+    width:90%;
+    margin: auto;
+    position: absolute;
+    z-index: 5;
+  }
+  .rightinfodivbar {
+    display: block;
+  }
+}
+@media screen and (min-width:700px) and (max-width:2000px) {
+  .progressbar {
+    width:70%;
+  }
+  #steperrowcss{
+    flex-direction: row;
+  }
+  .form {
+    width: 50%;
+  }
+  infodiv{
+    width:27%;
+  }
+  .rightinfodivbar {
+    display: none;
+    font-size: 0px;
+  }
+}
+@media screen and (min-width:2000px) {
+  .progressbar {
+    width:60%;
+  }
+  #steperrowcss{
+    flex-direction: row;
+  }
+  .form {
+    width: 40%;
+  }
+  infodiv{
+    width:20%;
+  }
+  .rightinfodivbar {
+    display: none;
+    font-size: 0px;
+  }
+}
+
+
+
+
+
+
